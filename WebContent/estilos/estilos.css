@@ -1,0 +1,865 @@
+
+@charset "ISO-8859-1";
+
+/*Padronizar*/
+body{
+	background-color: #edebeb;
+	font: 14px sans-serif;
+	margin: 0px;
+	padding: 0px; 	
+}
+
+.logo{
+	margin-left: 15px;
+	width: 120px;
+	
+}
+
+#procurar{
+	width: 400px;
+	margin-top: -80px;
+	margin-left: 150px;
+
+	-webkit-box-shadow: 4px 4px 8px #999; 
+	   -moz-box-shadow: 4px 4px 8px #999;
+	        box-shadow: 4px 4px 8px #999;
+
+}
+
+.publicacaoCard img{
+	height: 192px;
+}
+
+.carrinho{
+	margin-top: 50px;	
+}
+
+.linha{
+	margin-left: 30px;
+	margin-top: 40px;
+	width: 95%;
+}
+
+.linha2{
+	margin-left: 30px;
+	margin-top: 40px;
+	width: 95%;
+}
+
+.linha3{
+	margin-left: 30px;
+	margin-top: 40px;
+	width: 95%;
+}
+
+.linha4{
+	margin-left: 30px;
+	margin-top: 40px;
+	width: 95%;
+}
+
+.linhafooter{
+	margin-left: 30px;
+	margin-top: 40px;
+	width: 95%;
+}
+
+.btn-group{
+	margin-top: -50px;
+	margin-left: 1100px;
+}
+
+#aulas{
+	margin-left: 20px;
+}
+
+.consultoriabanner{	
+	width: 80%;
+	height: 150px;
+	margin-left: 130px;	
+	-webkit-box-shadow: 6px 6px 10px #999; 
+	   -moz-box-shadow: 6px 6px 10px #999;
+	        box-shadow: 6px 6px 10px #999;	
+}
+
+.aulasbanner{
+	width: 80%;
+	height: 150px;
+	margin-left: 130px;
+	margin-top: 10px;
+
+-webkit-box-shadow: 6px 6px 10px #999; 
+	   -moz-box-shadow: 6px 6px 10px #999;
+	        box-shadow: 6px 6px 10px #999;
+
+}
+
+.saudebanner{
+	width: 80%;
+	height: 150px;
+	margin-left: 130px;
+	margin-top: 10px;
+	
+	-webkit-box-shadow: 6px 6px 10px #999; 
+	   -moz-box-shadow: 6px 6px 10px #999;
+	        box-shadow: 6px 6px 10px #999;
+}
+
+.manutencaobanner{
+	width: 80%;
+	height: 150px;
+	margin-left: 130px;
+	margin-top: 10px;
+	
+	-webkit-box-shadow: 6px 6px 10px #999; 
+	   -moz-box-shadow: 6px 6px 10px #999;
+	        box-shadow: 6px 6px 10px #999;
+}
+
+.quemsomos{
+	margin-left: 600px;
+}
+
+
+/*Footer*/
+footer{
+	text-align: center;
+	font-size: 10px;
+	
+        
+   
+}
+.instagram{
+	width: 5%;
+	
+	
+	
+}
+
+.facebook{
+	width: 5%;
+	
+	
+	
+}
+
+.twitter{
+	width: 5%;
+	
+}
+
+.vantagem{
+	margin-left: 50px;
+}
+
+.textoVantagem{
+	margin-left: 85px;	
+}
+.textoVantagem2{
+	margin-left: 85px;	
+}
+.textoVantagem3{
+	margin-left: 85px;	
+}
+
+.ponto1{
+	margin-top: -80px;	
+}
+
+.anunciebanner{
+	width: 80%;
+	height: 120px;
+	margin-left: 130px;
+	margin-top: 10px;	
+	
+	-webkit-box-shadow: 6px 6px 10px #999; 
+	   -moz-box-shadow: 6px 6px 10px #999;
+	        box-shadow: 6px 6px 10px #999;
+	
+}
+
+.havan{
+	margin-left: 120px;	
+	margin-top: 18px;
+}
+
+.philips{
+	margin-left: 120px;	
+	margin-top: 18px;
+}
+
+.benner{
+	margin-left: 120px;
+	margin-top: 18px;
+}
+
+.senior{
+	margin-left: 120px;
+	margin-top: 18px;	
+}
+
+#nomeCliente{
+	width: 70%;
+	-webkit-box-shadow: 6px 6px 10px #999; 
+	   -moz-box-shadow: 6px 6px 10px #999;
+	        box-shadow: 6px 6px 10px #999;
+	
+}
+
+#emailCliente{
+	width: 70%;
+	-webkit-box-shadow: 6px 6px 10px #999; 
+	   -moz-box-shadow: 6px 6px 10px #999;
+	        box-shadow: 6px 6px 10px #999;
+}
+
+#senhaCliente{
+	width: 70%;
+	-webkit-box-shadow: 6px 6px 10px #999; 
+	   -moz-box-shadow: 6px 6px 10px #999;
+	        box-shadow: 6px 6px 10px #999;
+	
+}
+
+#confirmeCadastro{
+	width: 70%;
+	-webkit-box-shadow: 6px 6px 10px #999; 
+	   -moz-box-shadow: 6px 6px 10px #999;
+	        box-shadow: 6px 6px 10px #999;
+
+}
+
+#cpfCliente{
+	width: 70%;
+	-webkit-box-shadow: 6px 6px 10px #999; 
+	   -moz-box-shadow: 6px 6px 10px #999;
+	        box-shadow: 6px 6px 10px #999;
+
+}
+
+#enderecoCliente{
+	width: 70%;
+	-webkit-box-shadow: 6px 6px 10px #999; 
+	   -moz-box-shadow: 6px 6px 10px #999;
+	        box-shadow: 6px 6px 10px #999;
+
+}
+
+#contatoCliente{
+	width: 70%;
+	-webkit-box-shadow: 6px 6px 10px #999; 
+	   -moz-box-shadow: 6px 6px 10px #999;
+	        box-shadow: 6px 6px 10px #999;
+
+
+}
+
+.formularioCadastro{
+	margin-left: 25%;
+	margin-bottom: 50px;
+
+}
+
+.user{
+	margin-left: 50%;
+}
+
+.nomeCadastro{
+	margin-top: 15px;
+	margin-left: 280px;
+	
+		
+}
+
+.emailCadastro{
+	margin-top: 15px;
+	margin-left: 280px;	
+}
+
+.senhaCadastro{
+	margin-top: 15px;
+	margin-left: 280px;	
+}
+.confirmeCadastro{
+	margin-top: 15px;
+	margin-left: 280px;	
+}
+
+.cpfCadastro{
+	margin-top: 15px;
+	margin-left: 280px;	
+}
+
+.enderecoCadastro{
+	margin-top: 15px;
+	margin-left: 280px;
+}
+
+.telefoneCadastro{
+	margin-top: 15px;
+	margin-left: 280px;
+}
+
+.termos{
+	margin-left: 25%;
+	min-width: 15px;
+    min-height: 15px;
+    margin-right: 5px;
+	
+	margin-top: 30px;	
+}
+
+.user{
+	margin-left: 550px;
+}
+
+.user:hover{
+	text-shadow: 3px 3px;
+	
+}
+
+.pCadastro{
+	text-align: center;
+	margin-top: 10px;	
+}
+
+.pLogin{
+	text-align: center;
+	margin-top: 10px;	
+}
+
+#nomeLogin{
+	width: 70%;
+	-webkit-box-shadow: 6px 6px 10px #999; 
+	   -moz-box-shadow: 6px 6px 10px #999;
+	        box-shadow: 6px 6px 10px #999;
+}
+
+#senhaLogin{
+	width: 70%;	
+	-webkit-box-shadow: 6px 6px 10px #999; 
+	   -moz-box-shadow: 6px 6px 10px #999;
+	        box-shadow: 6px 6px 10px #999;
+}
+
+
+#btnEnviar{
+	margin-top: 100px;
+	float: center;
+	margin-left: -130px;	
+}
+
+#btnLogin{
+	margin-top: 2%;
+	margin-left: 50%;
+}
+
+.formularioLogin{
+	margin-left: 25%;
+}
+
+#btnLogin{
+	margin-left: 30%;
+}
+
+#bannerConheca{
+	-webkit-box-shadow: 6px 6px 10px #999; 
+	   -moz-box-shadow: 6px 6px 10px #999;
+	        box-shadow: 6px 6px 10px #999;
+}
+
+.empresa{
+	width: 90%;
+	margin-left: 2%;
+	margin-top: 2%;
+}
+
+.empresa2{
+	width: 90%;
+	margin-left: 2%;
+}
+
+#mapinha{
+	margin-top: 20px;
+	margin-left: 120px;
+	width: 80%;
+	-webkit-box-shadow: 6px 6px 10px #999; 
+	   -moz-box-shadow: 6px 6px 10px #999;
+	        box-shadow: 6px 6px 10px #999;	
+}
+
+#nomeAnunciante{
+	width: 70%;
+	-webkit-box-shadow: 6px 6px 10px #999; 
+	   -moz-box-shadow: 6px 6px 10px #999;
+	        box-shadow: 6px 6px 10px #999;
+}
+
+#nomeServicoAnunciante{
+	width: 70%;
+	-webkit-box-shadow: 6px 6px 10px #999; 
+	   -moz-box-shadow: 6px 6px 10px #999;
+	        box-shadow: 6px 6px 10px #999;
+}
+
+#senhaAnunciante{
+	width: 70%;
+	-webkit-box-shadow: 6px 6px 10px #999; 
+	   -moz-box-shadow: 6px 6px 10px #999;
+	        box-shadow: 6px 6px 10px #999;
+}
+
+#emailAnunciante{
+	width: 70%;
+	-webkit-box-shadow: 6px 6px 10px #999; 
+	   -moz-box-shadow: 6px 6px 10px #999;
+	        box-shadow: 6px 6px 10px #999;
+}
+
+#telefoneAnunciante{
+	width: 70%;
+	-webkit-box-shadow: 6px 6px 10px #999; 
+	   -moz-box-shadow: 6px 6px 10px #999;
+	        box-shadow: 6px 6px 10px #999;
+}
+
+#cpfAnunciante{
+	width: 70%;
+	-webkit-box-shadow: 6px 6px 10px #999; 
+	   -moz-box-shadow: 6px 6px 10px #999;
+	        box-shadow: 6px 6px 10px #999;
+}
+
+#enderecoAnunciante{
+	width: 70%;
+	-webkit-box-shadow: 6px 6px 10px #999; 
+	   -moz-box-shadow: 6px 6px 10px #999;
+	        box-shadow: 6px 6px 10px #999;
+}
+
+.tituloPublicacao{
+	margin-top: 15px;
+	margin-left: 280px;
+	
+}
+
+#tituloPub{
+	width: 70%;	
+	-webkit-box-shadow: 6px 6px 10px #999; 
+	   -moz-box-shadow: 6px 6px 10px #999; 
+	        box-shadow: 6px 6px 10px #999;
+}
+
+.nomePublicador{
+	margin-top: 15px;
+	margin-left: 280px;	
+}
+
+#nomePublicador{
+	width: 70%;	
+	-webkit-box-shadow: 6px 6px 10px #999; 
+	   -moz-box-shadow: 6px 6px 10px #999; 
+	        box-shadow: 6px 6px 10px #999;	
+}
+.descricaoPublicacao{
+	margin-top: 15px;
+	margin-left: 280px;	
+}
+
+#descricaoPublicacao{
+	width: 70%;	
+	-webkit-box-shadow: 6px 6px 10px #999; 
+	   -moz-box-shadow: 6px 6px 10px #999;
+	        box-shadow: 6px 6px 10px #999;
+}
+.imagemPub{
+	margin-top: 45px;
+	margin-left: 280px;
+}
+#cbServico{
+	margin-top: 40px;	
+	margin-left: 280px;
+}
+
+.preco{
+	margin-top: 15px;
+	margin-left: 280px;	
+}
+
+#preco{
+	width: 70%;	
+	-webkit-box-shadow: 6px 6px 10px #999; 
+	   -moz-box-shadow: 6px 6px 10px #999;
+	        box-shadow: 6px 6px 10px #999;
+	
+}
+.pub{
+	margin-left: 45%;
+}
+
+#botaoPublicar{
+	margin-left: 900px;
+}
+
+.input-group{
+	margin-left: 280px;
+	width: 54.7%;
+	margin-top: 20px;
+	-webkit-box-shadow: 6px 6px 10px #999; 
+	-moz-box-shadow: 6px 6px 10px #999;
+	box-shadow: 6px 6px 10px #999;	
+}
+
+/*Formulario de Cadastro de Anunciantes*/
+
+#nomeAnunciante{
+	width: 70%;
+	margin-top: 15px;
+	margin-left: 220px;
+}
+
+#nomeServicoAnunciante{
+	width: 70%;
+	margin-top: 15px;
+	margin-left: 220px;
+}
+
+#senhaAnunciante{
+	width: 70%;
+	margin-top: 15px;
+	margin-left: 220px;
+}
+
+#emailAnunciante{
+	width: 70%;
+	margin-top: 15px;
+	margin-left: 220px;
+}
+
+#telefoneAnunciante{
+	width: 70%;
+	margin-top: 15px;
+	margin-left: 220px;
+}
+
+#cpfAnunciante{
+	width: 70%;
+	margin-top: 15px;
+	margin-left: 220px;
+}
+
+#enderecoAnunciante{
+	width: 70%;
+	margin-top: 15px;
+	margin-left: 220px;
+}
+
+#termosAnunciante{
+	
+	margin-left: 42%;
+	min-width: 15px;
+    min-height: 15px;
+    margin-right: 5px;	
+	margin-top: 60px;	
+}
+
+#botaoSubmitAnunciante{
+	margin-top: 20px;
+	margin-left: 570px;
+}
+
+.userAnunciante{
+	margin-left: 45%;
+	width: 12%;
+}
+
+#informacoesImagem{
+	margin-left: 280px;	
+}
+
+#informacoesImagem2{
+	margin-left: 280px;	
+}
+
+/*
+
+#nomeDoPublicador{
+	margin-left: 40%;
+	color: black;
+	text-decoration: none ;
+}
+
+#tituloDaPublicacao{
+	margin-top: 15px;
+	margin-left: 33%;
+	color: black;
+	text-decoration: none ;	
+}
+
+#conteudoDaPublicacao{
+	outline: none;
+	color: black;
+	margin-left: 45%;
+}
+
+#imagemDaPublicacao{
+	max-width: 200px;
+	margin-left: 45%;
+}
+
+#servicoPublicacao{
+	outline: none;
+	color: black;
+	margin-left: 45%;
+}
+
+*/
+	
+#publicacaoCard{
+
+}
+
+
+/*
+.grid-container {
+	float: left;
+	grid-template-columns: 100px 100px 100px 100px;
+}
+
+.grid-container div{
+	float: right;
+	width: 1000px;
+}
+
+
+
+*,
+*::after,
+*::before { 
+  
+  float: left;
+  
+}
+*/
+
+.col-md-3{
+	float: left;
+	
+}
+
+.col-md-3{
+	opacity: 0.8;
+}
+
+.col-md-3:hover{
+	opacity: 4;
+}
+
+#imagemDoDetalhe{	
+	margin-left: 5%;
+	width: 50%;
+	-webkit-box-shadow: 2px 2px 8px #999; 
+		-moz-box-shadow: 2px 2px 8px #999;
+			box-shadow: 2px 2px 8px #999;	
+}
+
+#nomeDoDetalhe{
+	font-size: 15px;
+	margin-left: 5%;
+	margin-top: 0.5%;
+}
+
+#tituloDoDetalhe{
+	margin-left: 21%;	
+	margin-top: 10px;
+}
+
+#conteudoDoDetalhe{
+	margin-top: 3%;
+	text-align: center;
+}
+
+.hrDoDetalhe{
+	margin-left: 30px;
+	margin-top: 40px;
+	width: 95%;
+}
+
+#quadrado {	
+	
+	float: right;
+	margin-right: 60px;
+	border: 1px solid #b8b8b8;
+ 	width: 500px;
+ 	height: 240px;
+ 	-webkit-box-shadow: 2px 2px 8px #999; 
+		-moz-box-shadow: 2px 2px 8px #999;
+			box-shadow: 2px 2px 8px #999;
+}
+
+#quadrado img{	
+	float:left;
+	width: 7%;
+	height: 30px;
+	
+}
+
+#quadrado li{
+	width: 93%;	
+	float:right;
+	height: 30px;
+	margin: 0px;
+	padding: 20px;
+	font-weight: bold;
+}
+
+#btnDetalhe{
+	margin-top: 20px;
+	width: 498px;
+	height: 70px;
+	-webkit-box-shadow: 2px 2px 8px #999; 
+		-moz-box-shadow: 2px 2px 8px #999;
+			box-shadow: 2px 2px 5px #999;	
+}
+
+#hrefBotao1{
+	color: black;	
+}
+
+.textoX5{
+	text-align: center;
+}
+
+.venomExtreme{
+	font-size: 20px;
+	margin-top: 180px;
+	margin-left: 200px;	
+	color: green;
+}
+
+#numeroCompra{
+	width: 70%;
+	margin-top: 15px;
+	margin-left: 200px;
+	-webkit-box-shadow: 2px 2px 8px #999; 
+		-moz-box-shadow: 2px 2px 8px #999;
+			box-shadow: 2px 2px 5px #999;	
+}
+
+.validadeCompra{
+	margin-top: 15px;
+	margin-left: 200px;
+}
+
+.cb1{
+	margin-top: 15px; 
+	margin-left: 200px;
+	width: 200px;
+	height: 30px;
+	border-radius: 5px;
+	
+}
+
+.cb2{
+	margin-top: 15px;
+	margin-left: 200px;
+	width: 200px;
+	height: 30px;
+	border-radius: 5px;
+}
+
+#nomeCompra{
+	width: 70%;
+	margin-top: 15px;
+	margin-left: 200px;
+	-webkit-box-shadow: 2px 2px 8px #999; 
+		-moz-box-shadow: 2px 2px 8px #999;
+			box-shadow: 2px 2px 5px #999;	
+}
+
+#CVV{
+	width: 70%;
+	margin-top: 15px;
+	margin-left: 200px;
+	-webkit-box-shadow: 2px 2px 8px #999; 
+		-moz-box-shadow: 2px 2px 8px #999;
+			box-shadow: 2px 2px 5px #999;	
+}
+
+.cb3{
+	margin-top: 30px;
+	margin-left: 200px;
+	width: 200px;
+	height: 30px;
+	border-radius: 5px;
+}
+
+#botaoFinalizar{
+	width: 200px;
+	height: 50px;
+	margin-top: 4%;
+	margin-left: 15.5%;
+	-webkit-box-shadow: 2px 2px 8px #999; 
+		-moz-box-shadow: 2px 2px 8px #999;
+			box-shadow: 2px 2px 5px #999;	
+}
+
+#fotoC1{
+	width: 80px;
+	padding: 10px 10px;	
+	
+}
+
+#fotoC2{
+	width: 80px;
+	padding: 10px 10px;	
+	
+}
+
+#fotoC3{
+	width: 80px;
+	padding: 10px 10px;	
+	
+}
+
+#fotoC4{
+	width: 80px;
+	padding: 10px 10px;	
+
+}
+
+#fotoC5{
+	width: 80px;
+	padding: 10px 10px;	
+	
+}
+
+.cbox1{
+	margin-left: 22%;
+	margin-top: 5%;
+}
+
+.cbox2{
+	margin-top: 5%;
+	
+}
+
+.cbox3{
+	margin-top: 5%;
+	
+}
+
+.cbox4{
+	margin-top: 5%;
+	
+}
+
+.cbox5{
+	margin-top: 5%;
+	
+}
+
+#compraIcone{
+	margin-left: 45%;
+}
+
