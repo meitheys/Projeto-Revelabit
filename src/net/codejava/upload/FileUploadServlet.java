@@ -50,14 +50,13 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 	 
 	        ServletFileUpload upload = new ServletFileUpload(factory);
 	         
-	        // sets maximum size of upload file
+	  
 	        upload.setFileSizeMax(MAX_FILE_SIZE);
 	         
-	        // sets maximum size of request (include file + form data)
+	
 	        upload.setSizeMax(MAX_REQUEST_SIZE);
 	 
-	        // constructs the directory path to store upload file
-	        // this path is relative to application's directory
+	     
 	        String uploadPath = getServletContext().getRealPath("")
 	                + File.separator + UPLOAD_DIRECTORY;
 	         

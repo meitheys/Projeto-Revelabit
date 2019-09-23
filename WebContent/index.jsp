@@ -1,15 +1,9 @@
 
-	<title>Ínicio</title>
+	<title>Início</title>
 
 
 <%@include file="topo.jsp" %>
 	
-    
-    
-  
-
-	
-
 	 <!-- Banner -->
     <section class="fotorama" data-width="100%" data-loop="true" data-autoplay="true" id="banner">
         <img src="imagens/banner/banner.png">
@@ -30,6 +24,8 @@
 	<hr class="linha3">
 		
 	<h1 class="vantagem">Vantagens do Site!</h1>
+	
+	
 	
 	<ul>
 	<br>

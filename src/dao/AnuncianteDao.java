@@ -11,9 +11,54 @@ import conexao.Conexao;
 
 public class AnuncianteDao {
 
+	//Validar Login de Anunciante
+		public int validarLoginAnunciante(String nomeAnunciante, String senhaAnunciante) {
+			
+			//Contador
+			int contador02 = 0;
+			
+			//Conexão
+			Connection conexao = Conexao.obterConexao();
+			
+			//Try
+			try {
+				
+				//SQL
+				String sql = "SELECT COUNT(*) FROM anunciantes WHERE nomeAnunciante = ? AND senhaAnunciante = ?";
+				
+				//Querry
+				PreparedStatement pstmt = conexao.prepareStatement(sql);
+				
+				//Parametros
+				pstmt.setString(1, nomeAnunciante);
+				pstmt.setString(2, senhaAnunciante);
+				ResultSet rs = pstmt.executeQuery();
+				
+				rs.last();
+								
+				//Valor para validar
+				contador02 = rs.getInt(1);
+				
+				System.out.println(contador02+"Esse é o contador de Anunciante");
+				
+				System.out.println(nomeAnunciante+"...Nome");
+				System.out.println(senhaAnunciante+"...Senha");
+			
+			}catch(Exception erro) {
+				System.out.println("Falha ao validar o Anunciante"+erro.getMessage());
+			}
+			
+			//Retorno 
+			return contador02;
+			
+		}
+		
+	
+	
+	
 	//Obter dados do anunciante
 	
-	public AnuncianteBean obterDados(String nomeAnunciante, String senhaAnunciante) {
+	public AnuncianteBean obterDadosF(String nomeAnunciante, String senhaAnunciante) {
 		
 		//Obj
 		AnuncianteBean anuncianteBean = new AnuncianteBean();
@@ -23,7 +68,7 @@ public class AnuncianteDao {
 		
 		try {
 			
-			String sql = "SELECT * FROM clientes WHERE nomeAnunciante=? AND senhaAnunciante=?";
+			String sql = "SELECT * FROM anunciantes WHERE nomeAnunciante=? AND senhaAnunciante=?";
 			
 			PreparedStatement pstmt = conexao.prepareStatement(sql);
 			
@@ -36,7 +81,13 @@ public class AnuncianteDao {
 			
 			anuncianteBean.setIdAnunciante(rs.getInt(1));
 			anuncianteBean.setNomeAnunciante(rs.getString(2));
-			anuncianteBean.setSenhaAnunciante(rs.getString(3));
+			anuncianteBean.setNomeServicoAnunciante(rs.getString(3));
+			anuncianteBean.setSenhaAnunciante(rs.getString(4));
+			anuncianteBean.setEmailAnunciante(rs.getString(5));
+			anuncianteBean.setTelefoneAnunciante(rs.getString(6));
+			anuncianteBean.setCpfAnunciante(rs.getString(7));
+			anuncianteBean.setEnderecoAnunciante(rs.getString(8));
+			
 			
 		}catch(Exception erro) {
 			System.out.println("Falha ao obter os dados"+erro.getMessage());
@@ -83,5 +134,36 @@ public class AnuncianteDao {
 		return valida;
 		
 	}
+	
+	//Excluir
+			public boolean excluirAnu(int idAnunciante) {
+			
+				Connection conexao = Conexao.obterConexao();
+				
+				boolean valida = false;
+				
+			try {
+				
+				String sql = "DELETE FROM anunciantes WHERE idAnunciante=?";
+				
+				PreparedStatement pstmt = conexao.prepareStatement(sql);
+				
+				pstmt.setInt(1, idAnunciante);			
+				pstmt.execute();			
+				pstmt.close();
+				conexao.close();
+				
+				valida = true;
+				
+			}catch(Exception erro){
+				System.out.println("Falha ao excluir o anunciante"+erro.getMessage());
+			}
+				return valida;
+				
+				
+			}
+	
+	
+	
 		
 }

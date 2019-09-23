@@ -1,0 +1,74 @@
+@charset "ISO-8859-1";
+
+/* importante resetar os valores default de margin e padding 
+   de todos os elementos, exitem outras propriedades também
+   que são boas de serem resetadas, indico importarem o arquivo 
+   http://meyerweb.com/eric/tools/css/reset/reset.css antes de todo projeto
+   como nosso caso é simples, isso não será necessário */
+*{margin:0;padding:0;}
+
+/* o nosso checkbox não precisa estar visível para que possamos
+   acessar sua pseudo-classe :checked, sendo assim nós definimos
+   o display como none, que vai funcionar como se o nosso elemento
+   nem estivesse no DOM, não irá ocupar nenhum espaço, ao contrário
+   do que seria se simplesmente definissemos opacity:0 */
+#menu-tgl {
+	display: none;
+}
+
+/* aqui aparece o primeiro uso do nosso seletor ~, esse seletor
+   é usado quando queremos selecionar os próximos elementos na
+   árvore, desde que estejam no mesmo nivel, no nosso caso o
+   input[type=checkbox] está na mesma hierarquia que a nossa nav.menu */
+#menu-tgl ~ .menu {
+	box-sizing: border-box;
+	position: fixed;
+	width: 350px;
+	height: 100%;
+	background: #101925;
+	font-family: Verdana;
+	padding-top: 20px;
+	padding-left: 40px;
+	transform: translateX(380%); 
+	transition: transform 0.7s ease;
+}
+/* pre-fixos: eu não estou utilizando nenhum pré-fixo nesse arquivo
+   para não deixar muito longo o nosso post(mais do que ja está) */
+
+/* aqui usamos novamente o seletor ~, se olharem direito
+   como nosso label.menu-btn está dentro da nossa nav.menu
+   só conseguimos acessa-la se formos pelo nav.menu que está
+   na mesma hierarquia que nosso input#menu-tgl */
+#menu-tgl ~ .menu .menu-btn {
+	position: absolute;
+	box-sizing: border-box;
+	right: 400px;
+	width: 100px;
+	top: 20px;
+	font-size: 10px;
+	font-family: Helvetica;
+	cursor: pointer;
+	color: #black;
+	padding: 10px 18px;
+	border-radius: 5px;
+	text-align: center;
+}
+/* Aqui um bônus, para mudar o texto dentro do nosso label
+   nós utilizaremos o pseudo-elemento ::after, assim 
+   temos algo ainda mais interativo pro usuário,
+   quando estiver fechado irá aparecer "ABRIR" */
+#menu-tgl ~ .menu .menu-btn::after {
+	content:"ABRIR";
+}
+
+/* Aqui vem a magia do aparecimento da barra
+   quando nosso input#menu-tgl estiver selecionado 
+   a nossa barra irá deslizar suavemente para fora 
+   da lateral esquerda */
+#menu-tgl:checked ~ .menu {
+	transform: translateX(280%);
+}
+/* e o texto será alterado para "FECHAR" */
+#menu-tgl:checked ~ .menu .menu-btn::after {
+	content:"fechar";
+}

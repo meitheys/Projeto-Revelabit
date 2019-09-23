@@ -3,9 +3,15 @@ package beans;
 public class UsuarioBean {
 
 	private int idCliente;
-	private String nomeCliente, senhaCliente, enderecoCliente, emailCliente, cpfCliente;
-	private int contatoCliente;
+	private String nomeCliente, senhaCliente, enderecoCliente, emailCliente, cpfCliente, contatoCliente;;
 	
+	
+	public String getContatoCliente() {
+		return contatoCliente;
+	}
+	public void setContatoCliente(String contatoCliente) {
+		this.contatoCliente = contatoCliente;
+	}
 	public int getIdCliente() {
 		return idCliente;
 	}
@@ -43,11 +49,6 @@ public class UsuarioBean {
 	public void setCpfCliente(String cpfCliente) {
 		this.cpfCliente = cpfCliente;
 	}
-	public int getContatoCliente() {
-		return contatoCliente;
-	}
-	public void setContatoCliente(int contatoCliente) {
-		this.contatoCliente = contatoCliente;
-	}
+	
 	
 }

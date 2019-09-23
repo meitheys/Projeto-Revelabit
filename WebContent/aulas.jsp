@@ -7,6 +7,15 @@
     <title>Aulas</title>
 	    
 	<%@include file="topo.jsp" %>
+	
+	<!-- Barra de pesquisa -->
+		<div class="container">
+			<div class="row pb-4">
+   			 <div class="col-12">
+      		  <input type="text" name="searchbox" id="searchbox" class="filterinput form-control" placeholder="Encontre um serviço">
+    		</div>
+		</div>
+		</div>
 
 	<%
 		String sql = "SELECT * FROM publicacoes WHERE cbServico = 'Aulas'";
@@ -16,8 +25,11 @@
 		while(rs.next()){
 	%>
 	
-		 <!-- Controle do tamanho da coluna -->
-		 <div class="col-md-3">
+		<!--Só daq-->
+		<div id="CardFuncao">
+		
+		<!--até aq e o </div> la no fundo-->
+		<div class="col-md-3" id="CardFuncao">
 		
 		 <!-- Cor do Card -->
          <div class="card mb-5 text-white bg-dark">
@@ -41,6 +53,8 @@
          
          </div>
       
+     	 </div>
+     	 
      	 </div>
      		 
 			<!--<a href="detalhes.jsp?id=<% out.print(rs.getInt(1));%>">-->

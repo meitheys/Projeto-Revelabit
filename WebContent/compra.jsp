@@ -12,7 +12,7 @@
 	
 	<div class="numeroCompra">
     <label for="exampleInputPassword1"> </label>
-    <input type="text" class="form-control" name="numeroCompra" id="numeroCompra" placeholder="Número do Cartão">
+    <input type="text" action="mcc(v)()" class="form-control" name="numeroCompra" id="numeroCompra" placeholder="Número do Cartão">
   	</div>
   	
   	<div class="nomeCompra">
@@ -98,7 +98,7 @@
 	<br>
 	
 	
-	<button disabled id="botaoFinalizar" class="btn btn-warning" >Finalizar compra</button>
+	<a href="compraRealizada.jsp"><button  id="botaoFinalizar" class="btn btn-warning" >Finalizar compra</button></a>
 
 </body>
 

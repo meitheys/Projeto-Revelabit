@@ -18,6 +18,8 @@
 	
     ud.cadastrar(nomeCliente, senhaCliente, enderecoCliente, emailCliente, cpfCliente, contatoCliente);
     
-  
+   	response.sendRedirect("../index.jsp");
+   
+    
     
 	%>

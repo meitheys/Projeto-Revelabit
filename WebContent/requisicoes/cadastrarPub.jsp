@@ -1,3 +1,4 @@
+<%@page import="com.chilyfacts.com.FileUploadHandler"%>
 <%@page import="beans.PublicacaoBean"%>
 <%@page import="dao.PublicacaoDao"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -14,10 +15,11 @@
     String preco = request.getParameter("preco");
     
     
-    
+    FileUploadHandler fph = new FileUploadHandler();
     PublicacaoDao pd = new PublicacaoDao();
     PublicacaoBean pb = new PublicacaoBean();
     
+    fph.doPost(nomePublicador, tituloPub, conteudoPub, cbServico, imagemPub, preco);
 	pd.cadastrarPub(nomePublicador, tituloPub, conteudoPub, cbServico, imagemPub, preco);
     
 	

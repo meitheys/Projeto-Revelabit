@@ -1,3 +1,4 @@
+<%@page import="beans.AnuncianteBean"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" 
     pageEncoding="ISO-8859-1"%>
     
@@ -5,14 +6,22 @@
     
 	<%@include file="topo.jsp" %>
 
+	<%
+	
+	
+	
+	AnuncianteBean ab = (AnuncianteBean) session.getAttribute("Anunciante");
+		
+	%>
+
 	<img src="imagens/publicacao.png" class="pub">
 	
 	
-	<form action="requisicoes/cadastrarPub.jsp" method="post">
+	<form action="FileUploadHandler" method="post" enctype="multipart/form-data">
 	
 	<div class="nomePublicador">
     <label for="exampleInputPassword1"></label>
-    <input type="text" class="form-control" name="nomePublicador" id="nomePublicador"  placeholder="Informe o seu nome de Anunciante" maxlenght="50">
+    <input type="text" value="" class="form-control" name="nomePublicador" id="nomePublicador"  placeholder="Informe o seu nome de Anunciante" maxlenght="50">
   	</div>
 	
 	<div class="tituloPublicacao">
@@ -21,10 +30,10 @@
   	</div>
  	 	
   	<div class="input-group">
-  <div class="input-group-prepend">
+  	<div class="input-group-prepend">
     <span class="input-group-text" id="span">Descrição da Publicação</span>
-  </div>
-  <textarea class="form-control" aria-label="With textarea" name="conteudoPub"  id="conteudoPub" maxlenght="125"></textarea>
+  	</div>
+  	<textarea class="form-control" aria-label="With textarea" name="conteudoPub"  id="conteudoPub" maxlenght="900"></textarea>
 	</div>
 	
 	<div class="input-group">
@@ -38,10 +47,14 @@
     <option>Manutenção</option>
     <option>Aulas</option>
     <option>Consultoria</option>
-	</select>
+	</select> 
 	
 	<div>
-	<input type="file" name="imagemPub" class="imagemPub" id="file" multiple onchange="GetFileSizeNameAndType()"/>
+	<input type="text" name="file_name"><br>
+	</div>
+	
+	<div>
+	<input type="file" name="file" class="imagemPub" id="file" multiple onchange="GetFileSizeNameAndType()"/>
 	</div>
 	
 	<div id="fp"></div>
@@ -50,12 +63,19 @@
 	</p>
 	
 	<div>
-	<button value="submit" id="botaoPublicar" class="btn btn-success">Publicar
+	<button value="upload" id="botaoPublicar" class="btn btn-success">Publicar
 	</div>
 	
 	</form>
 	
+	<%
 	
+	String file_name=(String)request.getParameter("filename");
+    if(file_name!=null){
+ 	   out.println(file_name+" File uploaded successfuly");
+    }
+	
+	%>
 	
 	
 	
