@@ -1,3 +1,4 @@
+<%@page import="beans.UsuarioBean"%>
 <%@page import="dao.UsuarioDao"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -21,20 +22,21 @@
 	<br>
 	
 	<br>
-	<input type="text" name="idCliente" id="idCliente" class="idCliente" value="<% out.println(ub.getIdCliente()); %>">	
-	<input type="text" value="<% out.println(ub.getNomeCliente()); %>" name="nomeDado" id="nomeDado" class="form-control" placeholder="Nome">
-	<input type="text" value="<% out.println(ub.getSenhaCliente()); %>" name="senhaDado" id="senhaDado" class="form-control" placeholder="Senha">
-	<input type="text" value="<% out.println(ub.getEmailCliente()); %>" name="emailDado" id="emailDado" class="form-control" placeholder="Email">
-	<input type="text" value="<% out.println(ub.getContatoCliente()); %>" name="telefoneDado" id="telefoneDado" class="form-control" placeholder="Telefone">
-	<input type="text" value="<% out.println(ub.getCpfCliente()); %>" name="cpfDado" id="cpfDado" class="form-control" placeholder="CPF">
-	<input type="text" value="<% out.println(ub.getEnderecoCliente()); %>" name="enderecoDado" id="enderecoDado" class="form-control" placeholder="Endereço">
-	<input type="text" value="Usuario" id="tipo" class="form-control" placeholder="#">
+		
+	<input type="text" value="<% out.println(ub.getNomeCliente()); %>" name="nomeDadoAU" id="nomeDadoAU" class="form-control" placeholder="Nome">
+	<input type="text" value="<% out.println(ub.getSenhaCliente()); %>" name="senhaDadoAU" id="senhaDadoAU" class="form-control" placeholder="Senha">
+	<input type="text" value="<% out.println(ub.getEmailCliente()); %>" name="emailDadoAU" id="emailDadoAU" class="form-control" placeholder="Email">
+	<input type="text" value="<% out.println(ub.getContatoCliente()); %>" name="telefoneDadoAU" id="telefoneDadoAU" class="form-control" placeholder="Telefone">
+	<input type="text" value="<% out.println(ub.getCpfCliente()); %>" name="cpfDadoAU" id="cpfDadoAU" class="form-control" placeholder="CPF">
+	<input type="text" value="<% out.println(ub.getEnderecoCliente()); %>" name="enderecoDadoAU" id="enderecoDadoAU" class="form-control" placeholder="Endereço">
+	<input type="text" disabled="disabled" value="Usuario" id="tipoAU" class="form-control" placeholder="#">
+	<input type="text" disabled="disabled" name="idCliente" id="idCliente" class="form-control idCliente" value="<% out.println(ub.getIdCliente()); %>">
 	<button type="submit" value="Alterar"  id="botaoAlterar2" class="btn btn-warning">Alterar Dados</button>
 	
 	
 	</form>
 
-
+	<hr>
 
 </body>
 </html>

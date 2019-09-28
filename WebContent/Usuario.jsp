@@ -26,7 +26,7 @@
 	<br>
 	
 	<br>
-	<input type="text" name="idCliente" id="idCliente" class="idCliente" value="<% out.println(ub.getIdCliente()); %>">	
+	<input type="hidden" name="idCliente" id="idCliente" class="idCliente" value="<% out.println(ub.getIdCliente()); %>">	
 	<input type="text" value="<% out.println(ub.getNomeCliente()); %>" id="nomeDado" class="form-control" placeholder="Nome">
 	<input type="text" value="<% out.println(ub.getSenhaCliente()); %>" id="senhaDado" class="form-control" placeholder="Senha">
 	<input type="text" value="<% out.println(ub.getEmailCliente()); %>" id="emailDado" class="form-control" placeholder="Email">
@@ -51,7 +51,7 @@
 	</div>
 	
 	
-	<hr>
+	
 	
 	
 

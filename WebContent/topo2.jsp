@@ -6,7 +6,7 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 
-	<%@include file="topo.jsp" %>
+	
 
 		<!--  CSS -->
 	<link rel="stylesheet" href="estilos/estilosMenu.css">
@@ -36,34 +36,40 @@
 
 	<script>
 	
+	/* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+	function openNav() {
+	  document.getElementById("mySidenav").style.width = "250px";
+	  document.getElementById("main").style.marginRight = "250px";
+	  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+	}
 
+	/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+	function closeNav() {
+	  document.getElementById("mySidenav").style.width = "0";
+	  document.getElementById("main").style.marginRight = "0";
+	  document.body.style.backgroundColor = "white";
+	}
+	
 	
 	</script>
 
 <body>
 
-	
+	<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
 
-   <!-- O checkbox é o principal item dessa nossa brincadeira
-	graças ao seletor :checked nós poderemos ver se ele 
-	está ativo ou não -->
-<input type="checkbox" id="menu-tgl" />
+<!-- Use any element to open the sidenav -->
+<span onclick="openNav()">open</span>
 
-<!-- Aqui vem o menu que ficará escondido -->
-<nav class="menu">
-	<!-- Nosso outro protagonista, a tag label, será
-		responsável por ativar ou desativar o nosso checkbox
-		ativando e desativando a pseudo-classe :checked  -->
-	<label for="menu-tgl" class="menu-btn"></label>
-	
-	<!-- Conteúdo do nosso menu -->
-	<ul>
-		<li><a href="#">Página 1</a></li>
-		<li><a href="#">Página 2</a></li>
-		<li><a href="#">Página 3</a></li>
-	</ul>
-</nav>
-
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+  ...
+</div>
 
 
 

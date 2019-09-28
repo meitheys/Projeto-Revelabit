@@ -19,7 +19,7 @@ body{
 
 #header:hover{
 	
-	background: #f2f2f2;
+	background: #e3e3e3;
 }
 
 #procurar{
@@ -43,7 +43,7 @@ body{
 
 .linha{
 	margin-left: 30px;
-	margin-top: 30px;
+	margin-top: 50px;
 	width: 95%;
 }
 
@@ -87,6 +87,14 @@ body{
 	-webkit-box-shadow: 6px 6px 10px #999; 
 	   -moz-box-shadow: 6px 6px 10px #999;
 	        box-shadow: 6px 6px 10px #999;	
+	 transition: all 1.0s;    
+	 cursor: pointer;   
+}
+
+.consultoriabanner:hover{	
+	-webkit-transform: scale(1.08);
+    transform: scale(1.08);
+ 	
 }
 
 .aulasbanner{
@@ -94,6 +102,8 @@ body{
 	height: 150px;
 	margin-left: 130px;
 	margin-top: 10px;
+	transition: all 1.0s;    
+	 cursor: pointer;  
 
 -webkit-box-shadow: 6px 6px 10px #999; 
 	   -moz-box-shadow: 6px 6px 10px #999;
@@ -101,15 +111,27 @@ body{
 
 }
 
+.aulasbanner:hover{	
+	-webkit-transform: scale(1.08);
+    transform: scale(1.08);
+}
+
 .saudebanner{
 	width: 80%;
 	height: 150px;
 	margin-left: 130px;
 	margin-top: 10px;
+	transition: all 1.0s;    
+	cursor: pointer;  
 	
 	-webkit-box-shadow: 6px 6px 10px #999; 
 	   -moz-box-shadow: 6px 6px 10px #999;
 	        box-shadow: 6px 6px 10px #999;
+}
+
+.saudebanner:hover{	
+	-webkit-transform: scale(1.08);
+    transform: scale(1.08);
 }
 
 .manutencaobanner{
@@ -117,10 +139,17 @@ body{
 	height: 150px;
 	margin-left: 130px;
 	margin-top: 10px;
+	transition: all 1.0s;    
+	cursor: pointer;  
 	
 	-webkit-box-shadow: 6px 6px 10px #999; 
 	   -moz-box-shadow: 6px 6px 10px #999;
 	        box-shadow: 6px 6px 10px #999;
+}
+
+.manutencaobanner:hover{	
+	-webkit-transform: scale(1.08);
+    transform: scale(1.08);
 }
 
 .quemsomos{
@@ -156,17 +185,17 @@ footer{
 }
 
 .vantagem{
-	margin-left: 50px;
+	margin-left: 36%;
 }
 
 .textoVantagem{
-	margin-left: 85px;	
+	margin-left: 15%;
 }
 .textoVantagem2{
-	margin-left: 85px;	
+	margin-left: 15%;
 }
 .textoVantagem3{
-	margin-left: 85px;	
+	margin-left: 15%;
 }
 
 .ponto1{
@@ -177,31 +206,36 @@ footer{
 	width: 80%;
 	height: 120px;
 	margin-left: 130px;
-	margin-top: 10px;	
-	
+	margin-top: 25px;	
+	transition: all 1.0s;    
+	cursor: pointer;
 	-webkit-box-shadow: 6px 6px 10px #999; 
 	   -moz-box-shadow: 6px 6px 10px #999;
 	        box-shadow: 6px 6px 10px #999;
-	
+}
+
+.anunciebanner:hover{	
+	-webkit-transform: scale(1.08);
+    transform: scale(1.08);
 }
 
 .havan{
-	margin-left: 120px;	
+	margin-left: 140px;	
 	margin-top: 18px;
 }
 
 .philips{
-	margin-left: 120px;	
+	margin-left: 140px;	
 	margin-top: 18px;
 }
 
 .benner{
-	margin-left: 120px;
+	margin-left: 140px;
 	margin-top: 18px;
 }
 
 .senior{
-	margin-left: 120px;
+	margin-left: 140px;
 	margin-top: 18px;	
 }
 
@@ -372,11 +406,41 @@ footer{
 	margin-left: 30%;
 }
 
+.fotorama__img{
+	-webkit-box-shadow: 6px 6px 10px #999; 
+	   -moz-box-shadow: 6px 6px 10px #999;
+	        box-shadow: 6px 6px 10px #999;
+	        margin-top: 3%;
+}
+
 #bannerConheca{
 	-webkit-box-shadow: 6px 6px 10px #999; 
 	   -moz-box-shadow: 6px 6px 10px #999;
 	        box-shadow: 6px 6px 10px #999;
+	        margin-top: 5%;
 }
+
+
+.textoEmpresa{
+	margin-left: 42px;
+	font-size: 18px;
+}
+
+.textoEmpresa2{
+	margin-left: 42px;
+	font-size: 18px;
+}
+
+.textoEmpresa3{
+	margin-left: 42px;
+	font-size: 18px;
+}
+
+.textoEmpresa4{
+	margin-left: 42px;
+	font-size: 18px;
+}
+
 
 .empresa{
 	width: 90%;
@@ -987,9 +1051,9 @@ footer{
 }
 
 #botaoAlterar2{
-	margin-top: -121px;
+	margin-top: 55px;
 	width: 45.5%;
-	margin-left: 870px;
+	margin-left: 360px;
 }
 
 #botaoExcluir2{
@@ -1026,27 +1090,27 @@ footer{
 }
 
 #teste{
-	margin-top: -37px;
+	margin-top: -65px;
 	margin-left: 200px;
 		width: 100px;
 }
 
 #teste2{
-	margin-top: -25px;
-	margin-left: 400px;
+	margin-top: -15px;
+	margin-left: 416px;
 		width: 100px;
 }
 
 #teste3{
-	margin-top: -25px;
-	margin-left: 600px;
+	margin-top: -15px;
+	margin-left: 640px;
 	width: 100px;
 }
 
 
 #teste4{
-	margin-top: -25px;
-	margin-left: 800px;
+	margin-top: -15px;
+	margin-left: 1000px;
 	width: 100px;
 }
 
@@ -1088,12 +1152,12 @@ footer{
 
 /* Rotate last bar */
 .change .bar3 {
-  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-  transform: rotate(45deg) translate(-8px, -8px) ;
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
 }
 
 #header{
-	height: 10px;
+	height: 127px;
 }
 
 #idBoa{
@@ -1109,7 +1173,187 @@ footer{
 #menuTog{
 	width: 40px;
 	margin-left: 90%;
-	margin-top: -4%;
+	margin-top: -7%;
+
+}
+
+#menuTog2{
+	width: 40px;
+	margin-left: 90%;
+	margin-top: -12%;
+
 }
   
+#banner{
+	margin-top: 6px;
+	overflow: hidden; 
+}
+
+#nomeDadoAU{
+	width: 720px;
+	margin-top: 30px;
+	margin-left: 250px;
+	-webkit-box-shadow: 2px 2px 8px #999; 
+		-moz-box-shadow: 2px 2px 8px #999;
+			box-shadow: 2px 2px 8px #999;	
+	
+}
+
+#servicoDadoAU{
+	width: 720px;
+	margin-top: 30px;
+	margin-left: 250px;
+	-webkit-box-shadow: 2px 2px 8px #999; 
+		-moz-box-shadow: 2px 2px 8px #999;
+			box-shadow: 2px 2px 8px #999;	
+	
+}
+
+#senhaDadoAU{
+	width: 720px;
+	margin-top: 30px;
+	margin-left: 250px;
+	-webkit-box-shadow: 2px 2px 8px #999; 
+		-moz-box-shadow: 2px 2px 8px #999;
+			box-shadow: 2px 2px 8px #999;	
+
+}
+
+#emailDadoAU{
+	width: 720px;
+	margin-top: 30px;
+	margin-left: 250px;
+	-webkit-box-shadow: 2px 2px 8px #999; 
+		-moz-box-shadow: 2px 2px 8px #999;
+			box-shadow: 2px 2px 8px #999;	
+	
+}
+
+#telefoneDadoAU{
+	width: 720px;
+	margin-top: 30px;
+	margin-left: 250px;
+	-webkit-box-shadow: 2px 2px 8px #999; 
+		-moz-box-shadow: 2px 2px 8px #999;
+			box-shadow: 2px 2px 8px #999;	
+	
+}
+
+#cpfDadoAU{
+	width: 720px;
+	margin-top: 30px;
+	margin-left: 250px;
+	-webkit-box-shadow: 2px 2px 8px #999; 
+		-moz-box-shadow: 2px 2px 8px #999;
+			box-shadow: 2px 2px 8px #999;	
+
+}
+
+#enderecoDadoAU{
+	width: 720px;
+	margin-top: 30px;
+	margin-left: 250px;
+	-webkit-box-shadow: 2px 2px 8px #999; 
+		-moz-box-shadow: 2px 2px 8px #999;
+			box-shadow: 2px 2px 8px #999;	
+	
+}
+
+#tipoAU{
+	width: 720px;
+	margin-top: 30px;
+	margin-left: 250px;
+	-webkit-box-shadow: 2px 2px 8px #999; 
+		-moz-box-shadow: 2px 2px 8px #999;
+			box-shadow: 2px 2px 8px #999;	
+}
   
+#idCliente{
+	width: 720px;
+	margin-top: 30px;
+	margin-left: 250px;
+	-webkit-box-shadow: 2px 2px 8px #999; 
+		-moz-box-shadow: 2px 2px 8px #999;
+			box-shadow: 2px 2px 8px #999;	
+}
+
+#nomeDadoAA{
+	margin-top: 30px;
+	margin-left: 40px;
+	-webkit-box-shadow: 2px 2px 8px #999; 
+		-moz-box-shadow: 2px 2px 8px #999;
+			box-shadow: 2px 2px 8px #999;
+	
+}
+
+#servicoDadoAA{
+	margin-top: 30px;
+	margin-left: 40px;
+	-webkit-box-shadow: 2px 2px 8px #999; 
+		-moz-box-shadow: 2px 2px 8px #999;
+			box-shadow: 2px 2px 8px #999;
+	
+}
+
+#senhaDadoAA{
+	margin-top: 30px;
+	margin-left: 40px;
+	-webkit-box-shadow: 2px 2px 8px #999; 
+		-moz-box-shadow: 2px 2px 8px #999;
+			box-shadow: 2px 2px 8px #999;
+
+}
+
+#emailDadoAA{
+	margin-top: 30px;
+	margin-left: 40px;
+	-webkit-box-shadow: 2px 2px 8px #999; 
+		-moz-box-shadow: 2px 2px 8px #999;
+			box-shadow: 2px 2px 8px #999;
+	
+}
+
+#telefoneDadoAA{
+	margin-top: 30px;
+	margin-left: 40px;
+	-webkit-box-shadow: 2px 2px 8px #999; 
+		-moz-box-shadow: 2px 2px 8px #999;
+			box-shadow: 2px 2px 8px #999;
+	
+}
+
+#cpfDadoAA{
+	margin-top: 30px;
+	margin-left: 40px;
+	-webkit-box-shadow: 2px 2px 8px #999; 
+		-moz-box-shadow: 2px 2px 8px #999;
+			box-shadow: 2px 2px 8px #999;
+
+}
+
+#enderecoDadoAA{
+	margin-top: 30px;
+	margin-left: 40px;
+	-webkit-box-shadow: 2px 2px 8px #999; 
+		-moz-box-shadow: 2px 2px 8px #999;
+			box-shadow: 2px 2px 8px #999;
+	
+}
+
+#botaoAlterar3{
+	margin-top: -106px;
+    width: 45.5%;
+    margin-left: 868px;
+}
+
+#quadradoo3{
+		float: right;
+	margin-top: -514px;
+	margin-right: 80px;
+	border: 1px solid #b8b8b8;
+ 	width: 25%;
+ 	height: 300px;
+ 	-webkit-box-shadow: 2px 2px 8px #999; 
+		-moz-box-shadow: 2px 2px 8px #999;
+			box-shadow: 2px 2px 8px #999;	
+}

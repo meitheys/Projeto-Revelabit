@@ -7,12 +7,12 @@
     
     //Obter Dados
     int idCliente = Integer.parseInt(request.getParameter("idCliente"));
-    String nomeCliente = request.getParameter("nomeDado");
-    String senhaCliente = request.getParameter("senhaDado");
-    String cpfCliente = request.getParameter("cpfDado");
-    String contatoCliente = request.getParameter("contatoDado");
-    String enderecoCliente = request.getParameter("enderecoDado");
-    String emailCliente = request.getParameter("emailDado");
+    String nomeCliente = request.getParameter("nomeDadoAU");
+    String senhaCliente = request.getParameter("senhaDadoAU");
+    String cpfCliente = request.getParameter("cpfDadoAU");
+    String contatoCliente = request.getParameter("contatoDadoAU");
+    String enderecoCliente = request.getParameter("enderecoDadoAU");
+    String emailCliente = request.getParameter("emailDadoAU");
     
     
     //Criar um objeto
