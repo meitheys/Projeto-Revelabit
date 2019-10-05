@@ -5,23 +5,25 @@
     
 <%@include file="topo.jsp" %>
 	
-<img src="imagens/concluido.png" class="compraConcluida">
+		<img src="imagens/concluido.png" class="compraConcluida">
 
 <!-- <h2 class="pCadastro">Compra Finalizada com Sucesso!</h2> -->
 
-<div class="alert alert-secondary" role="alert" id=compraFim>
+	<div class="alert alert-secondary" role="alert" id=compraFim>
 
-<h4 class="alert-heading">Compra Finalizada!</h4>
+		<h4 class="alert-heading">Compra Finalizada!</h4>
 
-<p>Compra feita com sucesso! O serviço deve ser entregue em até 30 dias, se o serviço for malfeito ou vir a apresentar defeitos, você tem até 15 dias para ter seu dinheiro de volta.</p>
+			<p>Compra feita com sucesso! O serviço deve ser entregue em até 30 dias, se o serviço for malfeito ou vir a apresentar defeitos, você tem até 15 dias para ter seu dinheiro de volta.</p>
 
-<hr>
+	<hr>
 
-<p class="mb-0">Aproveite sua compra!</p>
+			<p class="mb-0">Aproveite sua compra!</p>
 
-</div>
+	</div>
 
-<a href="index.jsp"><button  id="botaoVolta" class="btn btn-warning btn-lg" >Continuar comprando</button></a>
+		<a href="index.jsp"><button  id="botaoVolta" class="btn btn-warning btn-lg" >Continuar comprando</button></a>
+
+		<a href="#" id="scroll" style="display: none;"><span></span></a>
 
 </body>
 

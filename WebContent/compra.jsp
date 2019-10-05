@@ -6,13 +6,44 @@
 
 	<%@include file="topo.jsp" %>
 
+	<script type="text/javascript">
+/* Máscaras ER */
+function mascara(o,f){
+    v_obj=o
+    v_fun=f
+    setTimeout("execmascara()",1)
+}
+function execmascara(){
+    v_obj.value=v_fun(v_obj.value)
+}
+function mnumeroCompra(v){
+    v=v.replace(/\D/g,"");
+    v=v.replace(/^(\d{4})(\d)/g,"$1 $2");
+    v=v.replace(/^(\d{4})\s(\d{4})(\d)/g,"$1 $2 $3");
+    v=v.replace(/^(\d{4})\s(\d{4})\s(\d{4})(\d)/g,"$1 $2 $3 $4");
+    return v;
+}
+function id( el ){
+	return document.getElementById( el );
+}
+window.onload = function(){
+	id('numeroCompra').onkeypress = function(){
+		mascara( this, mcc );
+	}
+}
+</script>
+
+
+
+	
+
 	<img src="imagens/iconeCompra.png" id="compraIcone">
 	
 	<form class="formularioCompra">
 	
 	<div class="numeroCompra">
     <label for="exampleInputPassword1"> </label>
-    <input type="text" action="mcc(v)()" class="form-control" name="numeroCompra" id="numeroCompra" placeholder="Número do Cartão">
+    <input type="text" class="form-control" onkeypress="numeroCompra(this)" name="numeroCompra" id="numeroCompra" placeholder="Número do Cartão">
   	</div>
   	
   	<div class="nomeCompra">
@@ -64,7 +95,7 @@
   	 	
   	<div class="CVV">
     <label for="exampleInputPassword1"> </label>
-    <input type="text" class="form-control" name="CVV" id="CVV" placeholder="CVV">
+    <input type="text" class="form-control" name="CVV" maxlength="3" id="CVV" placeholder="CVV">
   	</div>
 		
 	<select class="cb3">
@@ -99,6 +130,8 @@
 	
 	
 	<a href="compraRealizada.jsp"><button  id="botaoFinalizar" class="btn btn-warning" >Finalizar compra</button></a>
+
+	<a href="#" id="scroll" style="display: none;"><span></span></a>
 
 </body>
 

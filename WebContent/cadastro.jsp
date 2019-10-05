@@ -10,6 +10,15 @@
 	<link rel="stylesheet" href="estilos/estilos.css" type="text/css">
 	<link rel="stylesheet" href="estilos/estilosMenu.css" type="text/css">
 
+	<!--  WOW -->	
+	<script src="js/wow/wow.js"></script>
+	<script src="js/wow/wow.min.js"></script>		
+
+	<link rel="icon" href="imagens/logo.png" type="image/x-icon">
+
+	<!--  Animate CSS -->	
+	<link rel="stylesheet" href="js/animate/animate.min.css">	
+
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -31,6 +40,24 @@
   	integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
   	crossorigin="anonymous">
     </script>
+
+	<script>
+    wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       100,
+        callback:     function(box) {
+          console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+        }
+      }
+    );
+    wow.init();
+    document.getElementById('moar').onclick = function() {
+      var section = document.createElement('section');
+      section.className = 'section--purple wow fadeInDown';
+      this.parentNode.insertBefore(section, this);
+    };
+  </script>
 
 	 <script type="text/javascript">
     function mascaraCPF2(cpf){ 
@@ -155,14 +182,15 @@
 </div>
 
 	</header>
-
-	<img src="imagens/user.png" class="user">
-
-	<h2 class="pCadastro">Cadastro</h2>
 	
 	<br>
+	<br>
+	<img src="imagens/user.png" class="user wow fadeInUp">
+	<br>
+	<h2 class="pCadastro wow fadeInUp">Cadastro</h2>
+	<br>
 
-	<form class="formularioCadastro" action="requisicoes/cadastrarCliente.jsp" method="post">
+	<form class="formularioCadastro wow fadeInUp" action="requisicoes/cadastrarCliente.jsp" method="post">
 	
 	<div class="Nome">
     <label for="exampleInputPassword1"> </label>
@@ -191,10 +219,10 @@
 	
 	<div class="telefone">
     <label for="exampleInputPassword1"></label>
-    <input type="text" class="form-control" name="contatoCliente" id="contatoCliente" placeholder="Telefone" onkeypress="mascaraTelefone2(this)" maxlength="13">
+    <input type="text" class="form-control" name="contatoCliente" id="contatoCliente" placeholder="Telefone" onkeypress="mascaraTelefone2(this)" maxlength="14">
   	</div>
   	
-  	<input type="checkbox" class="termos">Confirmar termos de uso.
+  
   	
   	<button type="submit"  class="btn btn-success" id="btnEnviar">Enviar</button>
   	

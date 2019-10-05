@@ -20,4 +20,6 @@
     
     ad.cadastrar(nomeAnunciante, nomeServicoAnunciante, senhaAnunciante, emailAnunciante, telefoneAnunciante, cpfAnunciante, enderecoAnunciante);
     
+    response.sendRedirect("../index.jsp");
+    
     %> 

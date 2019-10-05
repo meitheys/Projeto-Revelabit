@@ -7,13 +7,13 @@
 
 
 	<h2 class="pCadastro" ></h2>
-	<img src="imagens/anunciante.png" class="userAnunciante">
+	<img src="imagens/anunciante.png" class="userAnunciante wow fadeInUp">
 
-	<h2 class="pCadastro">Cadastro do anunciante</h2>
+	<h2 class="pCadastro wow fadeInUp">Cadastro do anunciante</h2>
 	
    </header>
    
-   	<form class="formularioCadastroAnunciante" action="requisicoes/cadastroAnunciante.jsp" method="post">
+   	<form class="formularioCadastroAnunciante wow fadeInUp" action="requisicoes/cadastroAnunciante.jsp" method="post">
    
 	<div class="Nome">
     <label for="exampleInputNome1"></label>
@@ -51,15 +51,13 @@
     <input type="text" class="form-control" id="enderecoAnunciante" name="enderecoAnunciante" placeholder="Informe seu endereço">
   </div>
   
-	<div id="termos">
-	<input type="checkbox" class="termos" id="termosAnunciante">Confirmar termos de uso.
-	</div>
+	
 	
  <button type="submit" value="submit" class="btn btn-success" id="botaoSubmitAnunciante">Cadastrar</button>
  	
 </form>
 
-
+	<a href="#" id="scroll" style="display: none;"><span></span></a>
 
 </body>
 

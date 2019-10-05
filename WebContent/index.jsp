@@ -2,6 +2,21 @@
 
 <%@include file="topo.jsp" %>
 		
+	<% 
+	
+	String redirecionamento = "";
+	
+	Object A = session.getAttribute("Usuario");
+	Object B = session.getAttribute("Anunciante");
+	
+	if(B==null){
+		redirecionamento = "cadastrarAnunciante.jsp";
+	}else{
+		redirecionamento = "anuncie.jsp";
+	}
+		
+	%>
+		
 	<!-- Banner -->
     <section class="fotorama wow fadeInUp" data-width="100%" data-loop="true" data-autoplay="true" id="banner">
         <img src="imagens/banner/banner.png" id="fotoB1">
@@ -32,14 +47,14 @@
 	<li class="textoVantagem3">Para você que procura um serviço, aqui é seu lugar, aqui você encontra tudo que precisa no momento!</li>
 	</ul>
 	
-	<a href="anuncie.jsp"><img src="imagens/anuncie.png" class="anunciebanner wow fadeInUp"/></a>			
-	<a href="anuncie.jsp"><img src="imagens/havan.png" class="havan wow fadeInUp"/></a>
-	<a href="anuncie.jsp"><img src="imagens/philips.png" class="philips wow fadeInUp"/></a>	
-	<a href="anuncie.jsp"><img src="imagens/benner.png" class="benner wow fadeInUp"/></a>	
-	<a href="anuncie.jsp"><img src="imagens/senior.png" class="senior wow fadeInUp"/></a>
+	<a href="<%out.println(redirecionamento); %>"><img src="imagens/anuncie.png" class="anunciebanner wow fadeInUp"/></a>		
+	<a href="https://www.havan.com.br/"><img src="imagens/havanLogo.png" class="havan wow fadeInUp" id="havan"/></a>
+	<a href="https://www.philips.com.br/"><img src="imagens/philipsLogo.png" class="philips wow fadeInUp" id="philips"/></a>	
+	<a href="https://www4.benner.com.br/"><img src="imagens/bennerLogo.png" class="benner wow fadeInUp" id="benner"/></a>	
+	<a href="https://www.senior.com.br/"><img src="imagens/seniorLogo.png" class="senior wow fadeInUp" id="senior"/></a>
 		
 	
-	
+	<a href="#" id="scroll" style="display: none;"><span></span></a>
 	
 </body>
 

@@ -11,7 +11,7 @@ public class PublicacaoDao {
 
 
 	
-	public boolean cadastrarPub(String nomePublicador, String tituloPub, String conteudoPub, String cbServico, String imagemPub, String preco) {
+	public boolean cadastrarPub(String nomePublicador, int idAnunciante, String tituloPub, String conteudoPub, String cbServico, String imagemPub, String preco) {
 		
 		Connection conexao = Conexao.obterConexao();
 		
@@ -19,16 +19,17 @@ public class PublicacaoDao {
 		
 		try {
 			
-			String sql = "INSERT INTO publicacoes (nomePublicador, tituloPub, conteudoPub, cbServico, imagemPub, preco) VALUES (?,?,?,?,?,?)";
+			String sql = "INSERT INTO publicacoes (nomePublicador, idAnunciante, tituloPub, conteudoPub, cbServico, imagemPub, preco) VALUES (?,?,?,?,?,?,?)";
 			
 			PreparedStatement pstmt = conexao.prepareStatement(sql);
 			
 			pstmt.setString(1, nomePublicador);
-			pstmt.setString(2, tituloPub);
-			pstmt.setString(3, conteudoPub);
-			pstmt.setString(4, cbServico);
-			pstmt.setString(5, imagemPub);
-			pstmt.setString(6, preco);
+			pstmt.setInt(2, idAnunciante);
+			pstmt.setString(3, tituloPub);
+			pstmt.setString(4, conteudoPub);
+			pstmt.setString(5, cbServico);
+			pstmt.setString(6, imagemPub);
+			pstmt.setString(7, preco);
 			pstmt.execute();
 					
 			pstmt.close();
@@ -43,6 +44,38 @@ public class PublicacaoDao {
 			return valida;		
 	}
 	
+
+
+	public boolean excluirPub(int idAnunciante, String tituloPub) {
+		
+		Connection conexao = Conexao.obterConexao();
+		
+		boolean valida = false;
+		
+		try {
+		
+			String sql = "DELETE FROM publicacoes WHERE idAnunciante=? AND tituloPub=? ";
+			
+			PreparedStatement pstmt = conexao.prepareStatement(sql);
+			
+			pstmt.setInt(1, idAnunciante);
+			
+			pstmt.setString(2, tituloPub);	
+
+			pstmt.execute();
+					
+			pstmt.close();
+			conexao.close();
+			
+			valida = true;
+			
+		}catch(Exception erro) {
+			System.out.println("Falha ao excluir os dados"+erro.getMessage());
+		}
+
+		//Retorno
+		return valida;
+		
+	}
+		
 }
-
-

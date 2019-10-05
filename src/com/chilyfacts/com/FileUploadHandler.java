@@ -14,6 +14,8 @@ import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileItemFactory;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
+
+import beans.AnuncianteBean;
 public class FileUploadHandler extends HttpServlet {
     private static final long serialVersionUID = 1 ;
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -51,30 +53,20 @@ public class FileUploadHandler extends HttpServlet {
                 	conexao = DriverManager.getConnection(url, "root", "");
                 	
                 	Class.forName("com.mysql.jdbc.Driver");
+                	            	
+                	AnuncianteBean ab = new AnuncianteBean();
                 	
-                	String sql = "INSERT INTO publicacoes (nomePublicador, 	idAnunciante, tituloPub, conteudoPub, cbServico, fileItem, 	preco) VALUES (?, ?, ?, ?, ?, ?, ?)";
-                	               	
-                	String nomePublicador = request.getParameter("nomePublicador");
-                    String tituloPub = request.getParameter("tituloPub");
-                    String conteudoPub = request.getParameter("conteudoPub");
-                    String cbServico = request.getParameter("cbServico");
-                    String preco = request.getParameter("preco");
-                    
-                    
-                    
+                	int idAnunciante = ab.getIdAnunciante();
+    				
+
+                	String sql = "UPDATE clientes SET imagemCliente=? WHERE idCliente=?";
+                	        
                 	PreparedStatement pstmt = conexao.prepareStatement(sql);
                 	//pstmt.setString(1, file_name);
-                	pstmt.setString(1, nomePublicador);
-                	pstmt.setInt(2, 3);
-                	pstmt.setString(3, tituloPub);
-                	pstmt.setString(4, conteudoPub);
-                	pstmt.setString(5, cbServico);
-                	pstmt.setString(6, fileItem.getName());
-                	pstmt.setString(7, preco);
+                	pstmt.setString(1, fileItem.getName());       
+                	pstmt.setInt(2, idAnunciante);  
                 	pstmt.execute();
-                	
-                	 System.out.println(nomePublicador);
-                	
+                	                	
                 	fileItem.write(new File("C:\\Users\\entra21\\Desktop\\Matheus\\Java\\Revelabit\\WebContent\\imagens\\upload\\" + fileItem.getName()));
                     
                 	  

@@ -8,6 +8,9 @@
 	    
 	<%@include file="topo.jsp" %>
 	
+	
+	<br>
+	<br>
 	<!-- Barra de pesquisa -->
 		<div class="container">
 			<div class="row pb-4">
@@ -47,7 +50,7 @@
          <p class="card-text"><% out.print(rs.getString(4)); %></p>
                
          <!-- Button -->
-         <a href="detalhes.jsp?id=<% out.print(rs.getInt(1));%>" class="btn btn-outline-light btn-sm" id="numero" name="numero">Ir para Página</a>          
+         <a href="detalhes.jsp?id=<% out.print(rs.getInt(1));%>&idViewer=<% out.print(rs.getInt(3)); %>" class="btn btn-outline-light btn-sm" id="numero" name="numero">Ir para Página</a>          
                            
          </div>
          
@@ -65,6 +68,9 @@
 			<!--<h3 id="servicoPublicacao"><% out.print(rs.getString(6)); %></h3>-->
 				
 	<% } %>
+
+
+	<a href="#" id="scroll" style="display: none;"><span></span></a>
 
 </body>
 

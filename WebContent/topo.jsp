@@ -13,6 +13,8 @@
 	<link rel="stylesheet" href="estilos/estilos.css">
 	<link rel="stylesheet" href="estilos/estilosMenu.css">
 	
+	<link rel="icon" href="imagens/logo.png" type="image/x-icon">
+	
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -37,6 +39,25 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript"></script>
    
+   <script>
+   		
+
+   		$(document).ready(function(){ 
+   		    $(window).scroll(function(){ 
+   		        if ($(this).scrollTop() > 100) { 
+   		            $('#scroll').fadeIn(); 
+   		        } else { 
+   		            $('#scroll').fadeOut(); 
+   		        } 
+   		    }); 
+   		    $('#scroll').click(function(){ 
+   		        $("html, body").animate({ scrollTop: 0 }, 600); 
+   		        return false; 
+   		    }); 
+   		});
+   		  
+   		  </script>
+   
     <script>   
     function mcc(v){
     	  v = v.replace(/\D/g,""); // Permite apenas dígitos
@@ -47,7 +68,20 @@
     	  return v;
     	}
     </script>
-       
+      
+       <!-- Procurar por card -->
+	<script>
+	$(document).ready(function() {
+    $("#searchbox").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#CardFuncao div").filter(function() {
+        $(this).toggle($(this).find('h5').text().toLowerCase().indexOf(value) > -1)
+        	});
+    		});
+			});
+	</script>
+      
+      
     <!--Mascaras para cadastro--> 
     <script type="text/javascript">
     function mascaraTelefone(telefoneCadastro){ 
@@ -57,6 +91,28 @@
         	telefoneAnunciante.value = telefoneAnunciante.value + ') '; 
         if(telefoneAnunciante.value.length == 9)
         	telefoneAnunciante.value = telefoneAnunciante.value + '-';
+}
+	</script>
+	
+	<script type="text/javascript">
+    function mascaraTelefone4(){ 
+        if(telefoneDadoAU.value.length == 0)
+        	telefoneDadoAU.value = '(' + telefoneDadoAU.value; 
+        if(telefoneDadoAU.value.length == 3)
+        	telefoneDadoAU.value = telefoneDadoAU.value + ') '; 
+        if(telefoneDadoAU.value.length == 9)
+        	telefoneDadoAU.value = telefoneDadoAU.value + '-';
+}
+	</script>
+	
+	<script type="text/javascript">
+    function mascaraTelefone5(){ 
+        if(telefoneDado.value.length == 0)
+        	telefoneDado.value = '(' + telefoneDado.value; 
+        if(telefoneDado.value.length == 3)
+        	telefoneDado.value = telefoneDado.value + ') '; 
+        if(telefoneDado.value.length == 9)
+        	telefoneDado.value = telefoneDado.value + '-';
 }
 	</script>
 
@@ -70,6 +126,32 @@
         	cpfAnunciante.value = cpfAnunciante.value + '-';
 }
     </script>
+    
+    <script type="text/javascript">
+    function mascaraCPF4(){ 
+        if(cpfDadoAU.value.length == 3)
+        	cpfDadoAU.value = cpfDadoAU.value + '.'; 
+        if(cpfDadoAU.value.length == 7)
+        	cpfDadoAU.value = cpfDadoAU.value + '.'; 
+        if(cpfDadoAU.value.length == 11)
+        	cpfDadoAU.value = cpfDadoAU.value + '-';
+}
+    </script>
+    
+    <script type="text/javascript">
+    function mascaraCPF5(){ 
+        if(cpfDado.value.length == 3)
+        	cpfDado.value = cpfDado.value + '.'; 
+        if(cpfDado.value.length == 7)
+        	cpfDado.value = cpfDado.value + '.'; 
+        if(cpfDado.value.length == 11) 
+        	cpfDado.value = cpfDado.value + '-';
+}
+    
+
+    </script>
+    
+    
 
 	<script>
 
@@ -227,7 +309,7 @@
             <li><a href="saude.jsp">Saúde <span class="badge pull-right">  </span></a></li>
             <li class="divider"></li>
             <li><a href="manutencao.jsp">Manutenção <span class="glyphicon glyphicon-heart pull-right"></span></a></li>
-            <li class="divider"></li>    
+            <li class="divider"></li>    	
         </ul>
         	</li>
         </ul>

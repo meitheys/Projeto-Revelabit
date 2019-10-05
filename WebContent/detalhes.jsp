@@ -1,3 +1,4 @@
+<%@page import="beans.AnuncianteBean"%>
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="conexao.Conexao"%>
@@ -5,9 +6,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 		
-	
 	<%
-	
 		//int id = Integer.parseInt(request.getParameter("id"));
 		int id = Integer.parseInt(request.getParameter("id"));
 		String sql = "SELECT * FROM publicacoes WHERE idPub = ?";
@@ -18,61 +17,51 @@
 		while(rs.next()){
 	%>
 	
-	
-	
 	<title><% out.print(rs.getString(4)); %></title>
 	
-
-		
-		
 	<%@include file="topo.jsp" %>
-
-
+	
+	<form action="requisicoes/excluirPublicacao.jsp">
+		
 	<!-- nomePublicador -->
 	<div id="nomeDoDetalhe">
-    <h5 class="card-title" ><% out.print(rs.getString(2)); %></h5>
+    <h5 class="card-title nomePublicador"><% out.print(rs.getString(2)); %></h5>
 	</div>
 
 	<div id="quadrado">
 	
 	<ul>
-		<li>Parcelado em até 12x s/ Juros.</li>
+		<li class="pnc">Parcelado em até 12x s/ Juros.</li>
 			<li>Entrega em até 30 dias.</li>
 				<li>Desconto de 10% á vista.</li>
-					<li>Devolução até 15 dias depois da compra.</li>
-					
+					<li>Devolução até 15 dias depois da compra.</li>	
 	</ul>
-						<h5 class="venomExtreme">R$ <%out.print(rs.getString(8)); %></h5>
 	
-		
-		
-			<a href="compra.jsp"><button type="button" class="btn btn-warning" id="btnDetalhe">Continuar</button></a>
-		
-		
+	<h5 class="venomExtreme" id="venomExtreme" name="">R$ <%out.print(rs.getString(8)); %></h5>
 	
-		
-		
-		
+	<a href="compra.jsp"><button type="button" class="btn btn-warning" id="btnDetalhe">Continuar</button></a>
 	
 	</div>
 
-	<img src="imagens/<%out.print(rs.getString(7)); %>" id="imagemDoDetalhe" >
+	<img src="imagens/<%out.print(rs.getString(7)); %>" class="imagemPub" id="imagemDoDetalhe" >
  
- 
- <div id="tituloDoDetalhe">
-    <!-- Titulo -->
-    <h5 class="card-title" ><% out.print(rs.getString(4)); %></h5>
-  </div> 
+	<div id="tituloDoDetalhe">
+    <h5 class="card-title " id="pararan" ><% out.print(rs.getString(4)); %></h5>
+  	</div> 
   
   <hr class="hrDoDetalhe">
   
   <div id="conteudoDoDetalhe">
   
     <!-- Conteudo -->
-    <h5 class="card-title" ><% out.print(rs.getString(5)); %></h5>
+    <h5 class="card-title" id="conteudo"><% out.print(rs.getString(5)); %></h5>
   </div>
 
+	</form>	
+
 	<% } %>
+
+	<a href="#" id="scroll" style="display: none;"><span></span></a>
 
 </body>
 

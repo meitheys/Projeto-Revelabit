@@ -4,24 +4,29 @@
     
 <title>Anuncie</title>    
     
+    
 	<%@include file="topo.jsp" %>
 
 	<%
 	
-	
-	
 	AnuncianteBean ab = (AnuncianteBean) session.getAttribute("Anunciante");
-		
+	
+	
 	%>
 
-	<img src="imagens/publicacao.png" class="pub">
+	<br>
+	<br>
+	<img src="imagens/publicacao.png" class="pub">	
+	<br>
+	<br>
 	
+	<form action="requisicoes/cadastrarPub.jsp" method="post" >
 	
-	<form action="FileUploadHandler" method="post" enctype="multipart/form-data">
-	
+    <input type="readonly" value="<%out.println(ab.getIdAnunciante());%>" class="form-control" name="idDeAnunciar" id="idDeAnunciar"  placeholder="" maxlenght="50">
+  	
 	<div class="nomePublicador">
     <label for="exampleInputPassword1"></label>
-    <input type="text" value="" class="form-control" name="nomePublicador" id="nomePublicador"  placeholder="Informe o seu nome de Anunciante" maxlenght="50">
+    <input type="text" class="form-control" value="<%out.println(ab.getNomeAnunciante()); %>" name="nomePublicador" id="nomePublicador"  placeholder="Informe o seu nome de Anunciante" maxlenght="50">
   	</div>
 	
 	<div class="tituloPublicacao">
@@ -50,11 +55,7 @@
 	</select> 
 	
 	<div>
-	<input type="text" name="file_name"><br>
-	</div>
-	
-	<div>
-	<input type="file" name="file" class="imagemPub" id="file" multiple onchange="GetFileSizeNameAndType()"/>
+	<input type="file" name="imagemPub" class="imagemPub" id="imagemPub" multiple onchange="GetFileSizeNameAndType()"/>
 	</div>
 	
 	<div id="fp"></div>
@@ -77,7 +78,7 @@
 	
 	%>
 	
-	
+	<a href="#" id="scroll" style="display: none;"><span></span></a>
 	
 </body>
 

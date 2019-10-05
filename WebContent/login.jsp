@@ -10,6 +10,8 @@
 	<link rel="stylesheet" href="estilos/estilos.css" type="text/css">
 	<link rel="stylesheet" href="estilos/estilosMenu.css" type="text/css">
 	
+	<link rel="icon" href="imagens/logo.png" type="image/x-icon">
+	
 	<!--  WOW -->	
 	<script src="js/wow/wow.js"></script>
 	<script src="js/wow/wow.min.js"></script>		

@@ -10,7 +10,7 @@
     String nomeCliente = request.getParameter("nomeDadoAU");
     String senhaCliente = request.getParameter("senhaDadoAU");
     String cpfCliente = request.getParameter("cpfDadoAU");
-    String contatoCliente = request.getParameter("contatoDadoAU");
+    String contatoCliente = request.getParameter("telefoneDadoAU");
     String enderecoCliente = request.getParameter("enderecoDadoAU");
     String emailCliente = request.getParameter("emailDadoAU");
     
@@ -31,7 +31,8 @@
     
     //Redirecionar
     if(valida == true) {
-    	response.sendRedirect("../Usuario.jsp?mensagem=alterarDeBoassa");
+    	session.removeAttribute("Usuario");
+    	response.sendRedirect("../index.jsp");
     }else{
     	response.sendRedirect("../Usuario.jsp?mensagem=alterarFalha");
     }

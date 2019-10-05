@@ -27,12 +27,12 @@
 	
 	<br>
 	<input type="hidden" name="idCliente" id="idCliente" class="idCliente" value="<% out.println(ub.getIdCliente()); %>">	
-	<input type="text" value="<% out.println(ub.getNomeCliente()); %>" id="nomeDado" class="form-control" placeholder="Nome">
-	<input type="text" value="<% out.println(ub.getSenhaCliente()); %>" id="senhaDado" class="form-control" placeholder="Senha">
-	<input type="text" value="<% out.println(ub.getEmailCliente()); %>" id="emailDado" class="form-control" placeholder="Email">
-	<input type="text" value="<% out.println(ub.getContatoCliente()); %>" id="telefoneDado" class="form-control" placeholder="Telefone">
-	<input type="text" value="<% out.println(ub.getCpfCliente()); %>" id="cpfDado" class="form-control" placeholder="CPF">
-	<input type="text" value="<% out.println(ub.getEnderecoCliente()); %>" id="enderecoDado" class="form-control" placeholder="Endereço">
+	<input type="text" value="<% out.println(ub.getNomeCliente()); %>" id="nomeDado1" class="form-control" placeholder="Nome">
+	<input type="text" value="<% out.println(ub.getSenhaCliente()); %>" id="senhaDado1" class="form-control" placeholder="Senha">
+	<input type="text" value="<% out.println(ub.getEmailCliente()); %>" id="emailDado1" class="form-control" placeholder="Email">
+	<input type="text" value="<% out.println(ub.getContatoCliente()); %>" id="telefoneDado1" class="form-control" placeholder="Telefone">
+	<input type="text" value="<% out.println(ub.getCpfCliente()); %>" id="cpfDado1" class="form-control" placeholder="CPF">
+	<input type="text" value="<% out.println(ub.getEnderecoCliente()); %>" id="enderecoDado1" class="form-control" placeholder="Endereço">
 	<input type="text" value="Usuario" id="tipo" class="form-control" placeholder="#">
 	
 	
@@ -48,30 +48,10 @@
 	</form>
 	
 	<div id="quadradoo" >
+	<img src="imagens/cliente3.png" class="imgCliente">
 	</div>
 	
-	
-	
-	
-	
-
-	
-
-
-
-
-
-
-	
-	
-	
-
-	
-	
-	
-	
-	
-	
+		<a href="#" id="scroll" style="display: none;"><span></span></a>
 	
 </body>
 	

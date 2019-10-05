@@ -8,21 +8,19 @@
     
     //Obter dados
     String nomePublicador = request.getParameter("nomePublicador");
+    int idAnunciante = Integer.parseInt(request.getParameter("idDeAnunciar"));
     String tituloPub = request.getParameter("tituloPub");
     String conteudoPub = request.getParameter("conteudoPub");
     String cbServico = request.getParameter("cbServico");
     String imagemPub = request.getParameter("imagemPub");
     String preco = request.getParameter("preco");
     
-    
-    FileUploadHandler fph = new FileUploadHandler();
     PublicacaoDao pd = new PublicacaoDao();
     PublicacaoBean pb = new PublicacaoBean();
+
+	pd.cadastrarPub(nomePublicador, idAnunciante, tituloPub, conteudoPub, cbServico, imagemPub, preco);
     
-    fph.doPost(nomePublicador, tituloPub, conteudoPub, cbServico, imagemPub, preco);
-	pd.cadastrarPub(nomePublicador, tituloPub, conteudoPub, cbServico, imagemPub, preco);
-    
-	
+	response.sendRedirect("../index.jsp");
 
 	
     %>

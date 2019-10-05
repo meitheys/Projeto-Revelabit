@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import javax.naming.spi.DirStateFactory.Result;
 
 import beans.AnuncianteBean;
+import beans.UsuarioBean;
 import conexao.Conexao;
 
 public class AnuncianteDao {
@@ -163,7 +164,42 @@ public class AnuncianteDao {
 				
 			}
 	
-	
+	//Alterar
+			public boolean alterarAnu(AnuncianteBean obj) {
+				
+				//valida
+				boolean valida = false;
+				
+				//Conexão
+				Connection conexao = Conexao.obterConexao();	
+			
+				//Tentativa
+				try {
+					String sql = "UPDATE anunciantes SET nomeAnunciante = ?, nomeServicoAnunciante = ?, senhaAnunciante = ?, emailAnunciante = ?, telefoneAnunciante = ?, cpfAnunciante = ?, enderecoAnunciante =? WHERE idAnunciante = ?";
+					
+					PreparedStatement pstmt = conexao.prepareStatement(sql);
+					pstmt.setString(1, obj.getNomeAnunciante());
+					pstmt.setString(2, obj.getNomeServicoAnunciante());
+					pstmt.setString(3, obj.getSenhaAnunciante());
+					pstmt.setString(4, obj.getEmailAnunciante());
+					pstmt.setString(5, obj.getTelefoneAnunciante());
+					pstmt.setString(6, obj.getCpfAnunciante());
+					pstmt.setString(7, obj.getEnderecoAnunciante());
+					pstmt.setInt(8, obj.getIdAnunciante());
+					pstmt.execute();
+				
+					pstmt.close();
+					conexao.close();
+					
+					valida= true;
+				}catch(Exception erro) {
+					System.out.println(erro);
+				}
+				
+				
+				//Retorno
+				return valida;
+			}
 	
 		
 }
